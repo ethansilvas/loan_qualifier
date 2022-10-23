@@ -6,7 +6,6 @@ This contains a helper function for loading and saving CSV files.
 """
 import csv
 
-
 def load_csv(csvpath):
     """Reads the CSV file from path provided.
 
@@ -28,3 +27,17 @@ def load_csv(csvpath):
         for row in csvreader:
             data.append(row)
     return data
+
+def save_csv(csvpath, qualifying_loans):
+    """Saves qualifying loans data to csv file 
+    Args:
+        csvpath (Path): the csv file path 
+        qualifying_loans (list): a list of banks that willing to underwrite the loan  
+    """
+
+    with open(csvpath, 'w', newline='') as csvfile:
+        csvwriter = csv.writer(csvfile)
+
+        # write each bank of qualifying_loans as a row of the new csvfile output
+        for bank in qualifying_loans:
+            csvwriter.writerow(bank)
