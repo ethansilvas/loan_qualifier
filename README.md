@@ -1,33 +1,53 @@
-# Project Title
+# Module 2 Challenge - Loan Qualifier 
 
-Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
+This program is an automated loan qualifier that has an interactive CLI which allows users to test which banks their loan would qualify at.<br>
+There is dynamic functionality that allows the user to provide bank data and opt to save the qualifying loan data to an external file. 
 
 ---
 
 ## Technologies
 
-Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
+This is a Python 3.7 project
+
+The following dependencies are used: 
+
+[Python Fire](https://github.com/google/python-fire) - for intuitive and easy creation of the project's CLI <br>
+[Questionary](https://github.com/tmbo/questionary) - to create CLI prompts/interactions to handle user input 
 
 ---
 
 ## Installation Guide
 
-In this section, you should include detailed installation notes containing code blocks and screenshots.
+To install each of the required dependencies, run the following commands: 
+
+```
+pip install fire
+pip install questionary
+```
 
 ---
 
 ## Usage
 
-This section should include screenshots, code blocks, or animations explaining how to use your project.
+To begin using this program, start the app by running app.py in your terminal like so: 
+
+```python
+python app.py
+```
+
+You will then be prompted to enter all the information needed to calculate loan worthiness. Type your response to each one and press enter to move on to the next prompt.
+
+Here is an example of a successful run of the program resulting in loans being saved to a provided file: 
+![Terminal output of loan information prompts and successful save to file](images/loan_qualifier_usage.png)
 
 ---
 
 ## Contributors
 
-In this section, list all the people who contribute to this project. You might want recruiters or potential collaborators to reach you, so include your contact email and, optionally, your LinkedIn or Twitter profile.
+[Ethan Silvas](https://github.com/ethansilvas)
 
 ---
 
 ## License
 
-When you share a project on a repository, especially a public one, it's important to choose the right license to specify what others can and can't with your source code and files. Use this section to include the license you want to use.
+This project uses the [GNU General Public License](https://choosealicense.com/licenses/gpl-3.0/)
