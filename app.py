@@ -103,13 +103,25 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 
 def save_qualifying_loans(qualifying_loans):
-    """Saves the qualifying loans to a CSV file.
+    """Prompts the user to save the results to a file.
+
+    If the user opts to save the results, the results will be saved to the provided file path.
+    Otherwise, a message will be printed saying that the results were not saved to file. 
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
-    csvpath = Path('qualifying_loans.csv')
-    save_csv(csvpath, qualifying_loans)
+
+    # store user decision to save to file
+    save_to_file = questionary.confirm('Would you like to save the qualifying loans to a csv file?').ask()
+
+    if save_to_file:
+        # save to file given by after user prompt, and print the file path that it was saved to 
+        csvpath = Path(questionary.text('Enter the name of the file you would like to save to (.csv):').ask())
+        save_csv(csvpath, qualifying_loans)
+        print(f'Results were saved to: {csvpath}')
+    else:
+        print('Results were not saved to file.')
 
 
 def run():
