@@ -105,23 +105,27 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 def save_qualifying_loans(qualifying_loans):
     """Prompts the user to save the results to a file.
 
-    If the user opts to save the results, the results will be saved to the provided file path.
-    Otherwise, a message will be printed saying that the results were not saved to file. 
+    Assuming that there qualifying_loans is not empty, the user may opt to save the results to a provided file path.
+    Otherwise, a message will be printed saying that the loan did not qualify at any banks.
+    The user may also choose not to save resulting data to file.  
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
 
-    # store user decision to save to file
-    save_to_file = questionary.confirm('Would you like to save the qualifying loans to a csv file?').ask()
+    if len(qualifying_loans) > 0:
+        # store user decision to save to file
+        save_to_file = questionary.confirm('Would you like to save the qualifying loans to a csv file?').ask()
 
-    if save_to_file:
-        # save to file given by after user prompt, and print the file path that it was saved to 
-        csvpath = Path(questionary.text('Enter the name of the file you would like to save to (.csv):').ask())
-        save_csv(csvpath, qualifying_loans)
-        print(f'Results were saved to: {csvpath}')
-    else:
-        print('Results were not saved to file.')
+        if save_to_file:
+            # save to file given by after user prompt, and print the file path that it was saved to 
+            csvpath = Path(questionary.text('Enter the name of the file you would like to save to (.csv):').ask())
+            save_csv(csvpath, qualifying_loans)
+            print(f'Results were saved to: {csvpath}')
+        else:
+            print('Results were not saved to file.')
+    else: 
+        print('There are no banks within the provided bank data that would underwrite the loan.')
 
 
 def run():
