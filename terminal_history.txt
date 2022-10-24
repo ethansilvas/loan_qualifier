@@ -1,0 +1,79 @@
+  511  ls
+  512  pwd
+  513  cd Projects
+  514  ls
+  515  git clone https://github.com/ethansilvas/loan_qualifier.git
+  516  cd loan_qualifier
+  517  ls
+  518  ls
+  519  code .
+  520  ls
+  521  git add .
+  522  git status
+  523  git commit -m "init commit; add all starter files"
+  524  git status
+  525  git push
+  526  touch .gitignore
+  527  git status
+  528  git add .gitignore
+  529  git status
+  530  git status
+  531  git commit -m "add gitignore"
+  532  git status
+  533  git push
+  534  git status
+  535  ls
+  536  history 50 > terminal_history.txt
+  537  conda activate dev
+  538  python app.py
+  539  python app.py
+  540  python app.py
+  541  python app.py
+  542  python app.py
+  543  python app.py
+  544  git status
+  545  git add .
+  546  git status
+  547  git commit -m "integrate save to csv function"
+  548  git status
+  549  git push
+  550  git status
+  551  python app.py
+  552  python app.py
+  553  python app.py
+  554  python app.py
+  555  python app.py
+  556  python app.py
+  557  git status
+  558  python app.py
+  559  python app.py
+  560  git status
+  561  git add .
+  562  git status
+  563  git commit -m "add questionary prompts to save_qualifying_loans"
+  564  git status
+  565  git push
+  566  history 50 > terminal_history.txt
+  567  git status
+  568  git status
+  569  git add .
+  570  git status
+  571  git commit -m "copy over previously written readme info and required image"
+  572  git status
+  573  git push
+  574  git status
+  575  git add .
+  576  git status
+  577  git commit -m "add function descriptions to usage section of readme"
+  578  git status
+  579  git push
+  580  python app.py
+  581  python app.py
+  582  python app.py
+  583  python app.py
+  584  git status
+  585  git add .
+  586  git status
+  587  git commit -m "add exception for when there are 0 qualifying loans"
+  588  git push
+  589  python app.py
