@@ -10,8 +10,8 @@ This is a Python 3.7 project
 
 The following dependencies are used: 
 
-[Python Fire](https://github.com/google/python-fire) - for intuitive and easy creation of the project's CLI <br>
-[Questionary](https://github.com/tmbo/questionary) - to create CLI prompts/interactions to handle user input 
+[Python Fire](https://github.com/google/python-fire) (0.4.0) - for intuitive and easy creation of the project's CLI <br>
+[Questionary](https://github.com/tmbo/questionary) (1.10.0) - to create CLI prompts/interactions to handle user input 
 
 ---
 
