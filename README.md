@@ -1,4 +1,4 @@
-# Module 2 Challenge - Loan Qualifier 
+# Loan Qualifier - UW Fintech Bootcamp Module 2 Challenge
 
 This program is an automated loan qualifier that has an interactive CLI which allows users to test which banks their loan would qualify at. There is dynamic functionality that allows the user to provide bank data and opt to save the qualifying loan data to an external file. 
 
